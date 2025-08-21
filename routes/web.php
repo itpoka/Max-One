@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ExampleController;
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+Route::get('/', [ExampleController::class, 'view_home'])->name('home');
+Route::get('/contact', [ExampleController::class, 'view_contact'])->name('contact');
+Route::get('/about', [ExampleController::class, 'view_about'])->name('about');
+Route::get('/at_a_Glance', [ExampleController::class, 'view_at_a_Glance'])->name('at_a_Glance');
+Route::get('/leadership', [ExampleController::class, 'view_leadership'])->name('leadership');
+Route::get('/ourvalues', [ExampleController::class, 'view_ourvalues'])->name('ourvalues');
+Route::get('/diversity', [ExampleController::class, 'view_diversity'])->name('diversity');
+Route::get('/ourhistory', [ExampleController::class, 'view_ourhistory'])->name('ourhistory');
+Route::get('/ourStrategy', [ExampleController::class, 'view_ourStrategy'])->name('ourStrategy');
+Route::get('/motorcycleEngineOils', [ExampleController::class, 'view_motoEngine'])->name('motorcycleEngineOils');
+Route::get('/carEngineOils', [ExampleController::class, 'view_carEngine'])->name('carEngineOils');
+Route::get('/productView', [ExampleController::class, 'view_productView'])->name('productView');
+Route::get('/distributor', [ExampleController::class, 'view_distributor'])->name('distributor');
+Route::get('/chooseProduct', [ExampleController::class, 'view_chooseProduct'])->name('chooseProduct');
+Route::get('/openCard', [ExampleController::class, 'view_openCard'])->name('openCard');
+Route::get('/checkout', [ExampleController::class, 'view_checkout'])->name('checkout');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('/about', function () {
+//     return view('about');
+// });
