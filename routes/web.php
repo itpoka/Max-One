@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExampleController;
+use App\Http\Controllers\backend\dashboardController;
+use App\Http\Controllers\backend\AdminAuthController;
+use App\Http\Controllers\backend\OilTypeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +16,39 @@ use App\Http\Controllers\ExampleController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+
+// =====================================
+// Start backend
+// =====================================
+
+
+
+Route::prefix('backend')->name('backend.')->group(function () {
+    
+    // Dashboard
+    Route::get('/dashboard', [dashboardController::class, 'index'])->name('dashboard');
+    Route::get('/login', [AdminAuthController::class, 'login'])->name('login');
+    Route::post('/login-process', [AdminAuthController::class, 'login_process'])->name('login.submit');
+    Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
+
+});
+
+Route::prefix('backend')->name('backend.')->group(function () {
+    
+    // Dashboard
+    Route::get('/oil-type', [OilTypeController::class, 'index'])->name('oil.type.index');
+    Route::post('/oil-type-add', [OilTypeController::class, 'create'])->name('oil.type.add');
+    Route::post('/oil-category-add', [OilTypeController::class, 'oil_category_create'])->name('oil.category.add');
+
+
+});
+//  ===================================
+//  backend end
+//  ====================================
+
+
 
 Route::get('/', [ExampleController::class, 'view_home'])->name('home');
 Route::get('/contact', [ExampleController::class, 'view_contact'])->name('contact');
