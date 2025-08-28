@@ -191,7 +191,7 @@
                                           <div >
                                             <div class="welcome">
                                               <h1 class="blue-gray-divider blue-gray-divider-gray">Welcome<span>&nbsp;</span></h1>
-                                              <div>Bashundhara LP Gas Ltd. is an enterprise of the pioneering business conglomerate of the country, Sanvir Bashundhara Group. Bashundhara LP Gas is the first LP Gas importer, cylinder distributor, cylinder manufacture and marketing company of the country in the private sector. Their first plant was established adjacent to the Mongla Port. Subsequently…</div>
+                                              <div>The journey of Max-One spans decades of resilience, vision, and growth — evolving from a humble tailoring shop to a trusted leader in multiple industries.…</div>
                                               <a class="learn-more" href="https://www.bashundharalpgas.com/page/welcome"><span>Learn More</span></a>
                                             </div>
                                           </div>
@@ -272,12 +272,14 @@
   <div class="row g-4">
 
    <div class="col-6 col-lg-3">
-     <a href="http://127.0.0.1:8000/productView" class="text-decoration-none text-dark">
+   
   <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
     <div class="position-relative">
-      <img src="frontend/img/web.png" class="card-img-top img-fluid p-3" alt="Motorcycle Engine Oil">
+        <a href="http://127.0.0.1:8000/productView" class="text-decoration-none text-dark">
+      <img src="frontend/img/29512.jpg" class="card-img-top img-fluid p-3" alt="Motorcycle Engine Oil">
+      </a>
       <!-- <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2 px-3 py-2 rounded-pill">New</span> -->
-      <div class="quick-view">Quick View</div>
+      <div class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewProduct">Quick View1</div>
     </div>
 
     <div class="card-body text-center p-3">
@@ -297,7 +299,7 @@
 
     </div>
   </div>
-</a>
+
 </div>
 
 
@@ -1438,13 +1440,11 @@ setupLoadMore("loadMoreCar", "#car-product-list");
 
 
 
-
+  <!-- style="background: -webkit-linear-gradient(top, rgba(139, 188, 197, 0.8) 0%, rgba(255, 255, 255, 0.61) 48%, rgba(153, 153, 153, 0.41) 100%); -->
 
 
 <section >
-  <div class="px-4 py-4" 
-       style="background: -webkit-linear-gradient(top, rgba(139, 188, 197, 0.8) 0%, rgba(255, 255, 255, 0.61) 48%, rgba(153, 153, 153, 0.41) 100%);
-             ">
+  <div class="px-4 py-4" >
     
     <div class="text-center  m-4">
       <!-- <h6 class="fw-bold">Things you should know about</h6> -->
@@ -1600,5 +1600,131 @@ Oct 3, 2024 — The Bashundhara Oil and Gas Company has been given permission fo
 <!-- container div -->
 <!-- </div> -->
 
+
+
+
+
+
+
+<!-- Quick view -->
+<div class="modal fade" id="quickViewProduct" tabindex="-1" aria-labelledby="quickViewLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Close button -->
+      <button type="button" class="btn-close ms-auto m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <div class="modal-body p-4">
+        <div class="row">
+
+          <!-- Left Side: Product Image -->
+          <div class="col-md-6 text-center">
+            <div class="border rounded p-2 text-center">
+              <img id="mainImage" src="frontend/img/29512.jpg" class="img-fluid rounded" alt="Product Image">
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="d-flex gap-2 mt-3 justify-content-center">
+              <img src="frontend/img/29512.jpg" class="img-thumbnail thumb active" alt="thumb">
+              <img src="frontend/img/29513.jpg" class="img-thumbnail thumb" alt="thumb">
+              <img src="frontend/img/29514.jpg" class="img-thumbnail thumb" alt="thumb">
+            </div>
+          </div>
+
+          <!-- Right Side: Product Details -->
+          <div class="col-md-6">
+            <h4 class="fw-bold">Colorful Pattern Shirt</h4>
+            <p class="text-muted">SKU: FWM15VKT</p>
+            <div class="mb-2">⭐⭐⭐⭐☆ (25 reviews)</div>
+            <h5 class="text-primary">$120.00 
+              <span class="text-decoration-line-through text-muted fs-6">$200.00</span> 
+              <span class="badge bg-success ms-2">-25%</span>
+            </h5>
+
+            <p class="mt-3 text-secondary">
+              A comfortable and stylish colorful shirt, perfect for casual and semi-formal occasions.
+            </p>
+
+            <!-- Quantity + Buttons -->
+            <div class="d-flex align-items-center mb-3 quantity-box">
+              <button class="btn btn-outline-dark btn-sm btn-decrease">-</button>
+              <input type="text" value="1" class="form-control text-center mx-2" style="width:60px;">
+              <button class="btn btn-outline-dark btn-sm btn-increase">+</button>
+            </div>
+
+            <div class="d-flex gap-2">
+              <button class="btn btn-primary">Buy Now</button>
+              <button class="btn btn-dark">Add to Cart</button>
+            </div>
+
+            <hr>
+
+            <p class="mb-0"><strong>Category :</strong> Motorcycle engine oils</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Custom CSS -->
+<style>
+  .thumb {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+  .thumb.active {
+    opacity: 1;
+    border: 2px solid #0d6efd;
+  }
+</style>
+
+<!-- JS -->
+<script>
+  // Thumbnail image switch
+  document.querySelectorAll('.thumb').forEach(img => {
+    img.addEventListener('click', function () {
+      document.getElementById('mainImage').src = this.src;
+      document.querySelectorAll('.thumb').forEach(i => i.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Generic Quantity Controls for multiple boxes
+  function setupQuantityControls(containerSelector) {
+    const containers = document.querySelectorAll(containerSelector);
+
+    containers.forEach(container => {
+      const input = container.querySelector('input[type="text"]');
+      const btnIncrease = container.querySelector('.btn-increase');
+      const btnDecrease = container.querySelector('.btn-decrease');
+
+      btnIncrease.addEventListener('click', () => {
+        let currentVal = parseInt(input.value) || 1;
+        input.value = currentVal + 1;
+      });
+
+      btnDecrease.addEventListener('click', () => {
+        let currentVal = parseInt(input.value) || 1;
+        if (currentVal > 1) input.value = currentVal - 1;
+      });
+    });
+  }
+
+  // Initialize quantity controls
+  setupQuantityControls('.quantity-box');
+</script>
+
+
+
+
+
+
  
+
+
 @endsection

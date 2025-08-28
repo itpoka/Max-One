@@ -5,6 +5,9 @@ use App\Http\Controllers\ExampleController;
 use App\Http\Controllers\backend\dashboardController;
 use App\Http\Controllers\backend\AdminAuthController;
 use App\Http\Controllers\backend\OilTypeController;
+use App\Http\Controllers\backend\gradeController;
+use App\Http\Controllers\backend\featureController;
+use App\Http\Controllers\backend\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,8 +44,11 @@ Route::prefix('backend')->name('backend.')->group(function () {
     Route::get('/oil-type', [OilTypeController::class, 'index'])->name('oil.type.index');
     Route::post('/oil-type-add', [OilTypeController::class, 'create'])->name('oil.type.add');
     Route::post('/oil-category-add', [OilTypeController::class, 'oil_category_create'])->name('oil.category.add');
-
-
+    Route::get('/grade', [gradeController::class, 'index'])->name('grade.index');
+    Route::post('/grade-add', [gradeController::class, 'create'])->name('grade.add');
+    Route::get('/feature', [featureController::class, 'index'])->name('feature.index');
+    Route::get('/product', [ProductController::class, 'index'])->name('product.index');
+    Route::post('/AddNewProduct', [ProductController::class, 'AddNewProduct']);
 });
 //  ===================================
 //  backend end

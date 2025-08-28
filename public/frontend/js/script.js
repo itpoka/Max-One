@@ -1,16 +1,12 @@
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-})
+$(document).ready(function() {
+    $('#example').DataTable({
+        "paging": true,       // Enable pagination
+        "lengthChange": true, // Show entries per page
+        "searching": true,    // Enable search
+        "ordering": true,     // Enable column sorting
+        "info": true,         // Show info (Showing 1 to n of n entries)
+        "autoWidth": false,   // Disable auto column width
+        "responsive": true    // Make table responsive
+    })
+    console('hello');
+});

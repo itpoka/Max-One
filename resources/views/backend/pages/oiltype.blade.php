@@ -33,41 +33,52 @@
                     </div>
                     <!-- table primary end -->
                     <!-- table success start -->
-                    <div class="col-lg-6 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Oil Type List</h4>
-                                <div class="single-table">
-                                    <div class="table-responsive">
-                                        <table class="table text-center">
-                                            <thead class="text-uppercase bg-success">
-                                                <tr class="text-white">
-                                                    <th scope="col">ID</th>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col">action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                              @foreach ($oil_types as $index => $oil_type)
-                                                <tr>
-                                                    <th scope="row">{{ $index + 1 }}</th>
-                                                    <td>{{ $oil_type->name }}</td>
-                                                    <td><i class="ti-trash"></i></td>
-                                                </tr>
-                                            @endforeach
+                <div class="container-fluid col-lg-6 mt-5">
+                    <div class="card shadow-sm border">
+                    <div class="card-header  bg-gradient  py-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="mr-3">
+                                                <h4 class="mb-0"><i class="bi bi-grid-3x3-gap-fill mr-2"></i>Oil Type List</h4>
+                                            </div>
+                                            </div>
+                    </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table   class="table table-bordered table-hover table-striped text-center align-middle">
+                                    <thead class="table-primary text-uppercase">
+                                        <tr  style="background: linear-gradient(90deg, #1fbaab 0, #4ba1d9) !important;">
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tbody>
+                                    @foreach ($oil_types as $index => $oil_type)
+                                    <tr>
+                                        <th scope="row">{{ $index + 1 }}</th>
+                                        <td>{{ $oil_type->name }}</td>
+                                        <td class="text-center">
+                                            <div class="btn-group btn-group-sm" role="group"> 
+                                            <button type="button" class="btn btn-outline-success"><i class="bi bi-pencil"></i></button>
+                                            <button type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
 
-                                                
+                                        </td>
+                                    </tr>
+                                    @endforeach
                                             
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+                                    </tbody>
+                                </table>
+
+                                <!-- Optional: Pagination -->
+                                {{-- {{ $products->links('pagination::bootstrap-5') }} --}}
                             </div>
                         </div>
                     </div>
-                    <!-- table success end -->
-                   
-                </div>
+                </div>  
+
+  <!-- table success end -->
+</div>
 
                 {{-- =============
                 Oil Category
@@ -102,38 +113,49 @@
                     </div>
                     <!-- table primary end -->
                     <!-- table success start -->
-                    <div class="col-lg-6 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Oil category List</h4>
-                                <div class="single-table">
-                                    <div class="table-responsive">
-                                        <table class="table text-center">
-                                            <thead class="text-uppercase bg-success">
-                                                <tr class="text-white">
-                                                    <th scope="col">ID</th>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col">action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                              @foreach ($oil_categories as $index => $oil_category)
+
+ <div class="container-fluid col-lg-6 mt-5">
+                    <div class="card shadow-sm border">
+                    <div class="card-header  bg-gradient  py-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="mr-3">
+                                                <h4 class="mb-0"><i class="bi bi-grid-3x3-gap-fill mr-2"></i>Oil Category</h4>
+                                            </div>
+                                            </div>
+                    </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover table-striped text-center align-middle">
+                                    <thead class="table-primary text-uppercase">
+                                        <tr  style="background: linear-gradient(90deg, #1fbaab 0, #4ba1d9) !important;">
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                         @foreach ($oil_categories as $index => $oil_category)
                                                 <tr>
                                                     <th scope="row">{{ $index + 1 }}</th>
                                                     <td>{{ $oil_category->name }}</td>
-                                                    <td><i class="ti-trash"></i></td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group btn-group-sm" role="group"> 
+                                                        <button type="button" class="btn btn-outline-success"><i class="bi bi-pencil"></i></button>
+                                                        <button type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
+
+                                                    </td>
                                                 </tr>
                                             @endforeach
 
-                                                
-                                            
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+                                         </tbody>
+                                </table>
+
+                                <!-- Optional: Pagination -->
+                                {{-- {{ $products->links('pagination::bootstrap-5') }} --}}
                             </div>
                         </div>
                     </div>
+                </div>   
                     <!-- table success end -->
                    
                 </div>

@@ -148,7 +148,7 @@
                 <div class="d-none d-md-block">
                     <table class="table align-middle">
                         <thead class="table-light">
-                            <tr>
+                            <tr style="text-align:center;">
                                 <th>PRODUCT</th>
                                 <th>PRICE</th>
                                 <th>QUANTITY</th>
@@ -164,7 +164,7 @@
                                         <span>শাহী লাচ্ছা সেমাই ( ঘিয়ে ভাজা ) - ৫০০ গ্রাম</span>
                                     </div>
                                 </td>
-                                <td>750৳</td>
+                                <td style="text-align:center;">750৳</td>
                                 <td>
                                     <div class="qty-box">
                                         <button class="qty-btn">-</button>
@@ -172,7 +172,7 @@
                                         <button class="qty-btn">+</button>
                                     </div>
                                 </td>
-                                <td>750৳</td>
+                                <td style="text-align:center;">758৳</td>
                             </tr>
                             <tr>
                                 <td>

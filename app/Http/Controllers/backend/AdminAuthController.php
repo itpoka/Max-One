@@ -36,16 +36,16 @@ class AdminAuthController extends Controller
             return redirect()->route('backend.dashboard')->with('success', 'Welcome back!');
         }
 
-        // // ✅ If MD5 hash
-        // if ($admin->password === md5($request->password)) {
-        //     // Optional: Rehash to bcrypt for future logins
-        //     $admin->password = \Has::make($request->password);
-        //     $admin->save();
+        // ✅ If MD5 hash
+        if ($admin->password === md5($request->password)) {
+            // Optional: Rehash to bcrypt for future logins
+            $admin->password = \Has::make($request->password);
+            $admin->save();
 
-        //     Auth::guard('admin')->login($admin, $request->filled('remember'));
-        //     $request->session()->regenerate();
-        //     return redirect()->route('backend.dashboard')->with('success', 'Welcome back!');
-        // }
+            Auth::guard('admin')->login($admin, $request->filled('remember'));
+            $request->session()->regenerate();
+            return redirect()->route('backend.dashboard')->with('success', 'Welcome back!');
+        }
     }
 
     return back()->withErrors([

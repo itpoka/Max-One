@@ -194,7 +194,8 @@
     <script src="{{asset('backend')}}/assets/js/metisMenu.min.js"></script>
     <script src="{{asset('backend')}}/assets/js/jquery.slimscroll.min.js"></script>
     <script src="{{asset('backend')}}/assets/js/jquery.slicknav.min.js"></script>
-
+<script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap4.min.js"></script>
     <!-- start chart js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <!-- start highcharts js -->

@@ -477,11 +477,7 @@
         style="font-size: 0.9rem; white-space: nowrap;">
   <i class="bi bi-arrow-down-circle me-2" style="font-size: 1rem;"></i> Load More
 </button>
-
-
-
-    <!-- <button id="loadMoreMotor" class="btn btn-primary">Load More</button> -->
-  </div>
+ </div>
 </div>
  </div>
 

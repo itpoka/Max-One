@@ -9,10 +9,13 @@
     <link rel="shortcut icon" type="image/png" href="{{asset('backend')}}/assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="{{asset('backend')}}/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('backend')}}/assets/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{asset('backend')}}/assets/css/themify-icons.css">
     <link rel="stylesheet" href="{{asset('backend')}}/assets/css/metisMenu.css">
     <link rel="stylesheet" href="{{asset('backend')}}/assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="{{asset('backend')}}/assets/css/slicknav.min.css">
+    <!-- DataTables CSS for Bootstrap 4 -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap4.min.css">
     <!-- amchart css -->
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
     <!-- others css -->
@@ -62,17 +65,18 @@
                                     
                                 </ul>
                             </li>
-                            <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Products</span></a>
+                           <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Grade Related Data 
+                                    </span></a>
                                 <ul class="collapse">
-                                    <li><a href="">Products</a></li>
+                                    <li><a href="{{route('backend.grade.index')}}">Grade</a></li>
                                     
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>UI Features</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Product</span></a>
                                 <ul class="collapse">
-                                    <li><a href="accordion.html">Accordion</a></li>
+                                    <li><a href="{{route('backend.product.index')}}">Product</a></li>
                                     <li><a href="alert.html">Alert</a></li>
                                     <li><a href="badge.html">Badge</a></li>
                                     <li><a href="button.html">Button</a></li>
