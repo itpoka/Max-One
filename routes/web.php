@@ -48,7 +48,11 @@ Route::prefix('backend')->name('backend.')->group(function () {
     Route::post('/grade-add', [gradeController::class, 'create'])->name('grade.add');
     Route::get('/feature', [featureController::class, 'index'])->name('feature.index');
     Route::get('/product', [ProductController::class, 'index'])->name('product.index');
-    Route::post('/AddNewProduct', [ProductController::class, 'AddNewProduct']);
+    Route::post('/add-new-product', [ProductController::class, 'create'])->name('product.create');
+    Route::post('/update-product', [ProductController::class, 'product_update'])->name('product.update');
+    // Route::get('/delete-product/{id}', [ProductController::class, 'product_delete'])->name('product.delete');
+    Route::get('/delete-product/{id}', [ProductController::class, 'product_delete'])->name('product.delete');
+
 });
 //  ===================================
 //  backend end
